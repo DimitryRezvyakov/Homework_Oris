@@ -1,0 +1,443 @@
+<!DOCTYPE html>             
+
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Site</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__container">
+            <div class="header__content">
+                <div class="header__content__temperature">
+                    36°
+                </div>
+                <div class="header__content__title">
+                    Ahmedabad
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main__container">
+            <div class="main__page">
+                <div class="page__content">
+                    <p class="page__content__time">
+                        09:11:01
+                    </p>
+                    <p class="page__content__title">
+                        Good Morning, Saad.
+                    </p>
+                </div>
+                <div class="page__search">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/Common/Search.png">
+                        <img src="images/Small/Search.png" alt="">
+                    </picture>
+                    <input type="text" name="" id="" placeholder="Search">
+
+                </div>
+                <div class="page__social">
+                    <ul class="social__wrapper">
+                        <li>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/Common/YouTube.png">
+                                <img src="images/Small/YouTube.png" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/Common/ChatGPT.png">
+                                <img src="images/Small/ChatGPT.png" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/Common/GG.png">
+                                <img src="images/Small/GG.png" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/Common/Deepseek.png">
+                                <img src="images/Small/DeepSeek.png" alt="">
+                            </picture>
+                        </li>
+                        <li>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="images/Common/GitHub.png">
+                                <img src="images/Small/Github.png" alt="">
+                            </picture>
+                        </li>
+                        <li id="in">
+                            <img src="images/Common/In.png" alt="">
+                        </li>
+                        <li id="plus">
+                            <img src="images/Common/Plus.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+        }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+
+        a, a:link, a:visited {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+
+        aside, nav, footer, header, section, main {
+            display: block;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        ul, ul li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        input, textarea, button, select {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background-color: transparent;
+        }
+
+            input::-ms-clear {
+                display: none;
+            }
+
+            button, input[type="submit"] {
+                display: inline-block;
+                box-shadow: none;
+                background-color: transparent;
+                background: none;
+                cursor: pointer;
+            }
+
+                input:focus, input:active,
+                button:focus, button:active {
+                    outline: none;
+                }
+
+                button::-moz-focus-inner {
+                    padding: 0;
+                    border: 0;
+                }
+
+        label {
+            cursor: pointer;
+        }
+
+        legend {
+            display: block;
+        }
+
+        input[type='file'] {
+            max-width: 100%;
+        }
+
+        p {
+            margin: 0px;
+        }
+        @media (min-width: 768px) {
+        header {
+            margin: 20px 20px 0px 20px;
+        }
+        .header__container {
+            max-width: 1658px;
+            display: flex;
+            justify-content: end;
+        }
+        .header__content__temperature {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: end;
+        }
+        .header__content__title {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #6E6CDF;
+        }
+
+        .main__container {
+            width: 621px;
+            margin: auto;
+            margin-top: 254px;
+        }
+
+        .page__content__time {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 74px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        .page__content__title {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 36px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #6E6CDF;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .page__search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            background-color: #EEEEEE;
+            padding-block: 18px;
+            border-radius: 18px;
+            border: 1px solid #e4e4e4;
+            margin-top: 55px;
+            align-items: center;
+
+
+            font-family: Poppins;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            color: #9E9E9E;
+        }
+
+        .page__search input {
+            margin-left: 9px;
+            align-items: center;
+            line-height: normal;
+            height: 29px;
+        }
+
+        .page__search input::placeholder {
+            color: #9E9E9E;
+        }
+
+        .page__search picture {
+            display: flex;
+            justify-content: center;
+        }
+
+        .page__search img {
+            margin-left: 28px;
+        }
+
+        .page__social ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .page__social {
+            margin-top: 55px;
+            margin-bottom: 359px;
+        }
+
+        .page__social li {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EEEEEE;
+            border-radius: 18px;
+            border: 1px solid #e4e4e4;
+        }
+    }
+    @media (max-width: 768px) {
+
+        header {
+            margin: 20px 24px 0px 24px;
+        }
+        .header__container {
+            max-width: 768px;
+            display: flex;
+            justify-content: end;
+        }
+        .header__content__temperature {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+            text-align: end;
+        }
+        .header__content__title {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #6E6CDF;
+        }
+
+        .main__container {
+            width: 345px;
+            margin: auto;
+            margin-top: 215px;
+        }
+
+        .page__content__time {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 48px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        .page__content__title {
+            font-family: Afacad;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #6E6CDF;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .page__search {
+            display: flex;
+            flex-direction: row;
+            background-color: #EEEEEE;
+            padding-block: 16px;
+            border-radius: 16px;
+            border: 1px solid #e4e4e4;
+            margin-top: 55px;
+            align-items: center;
+            margin-top: 215px;
+
+
+            font-family: Poppins;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+
+            color: #9E9E9E;
+        }
+
+        .page__search input {
+            margin-left: 9px;
+            align-items: center;
+            line-height: normal;
+            height: 29px;
+        }
+
+        .page__search input::placeholder {
+            color: #9E9E9E;
+        }
+
+        .page__search picture {
+            display: flex;
+            justify-content: center;
+        }
+
+        .page__search img {
+            margin-left: 28px;
+        }
+
+        .page__social ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+/* 
+        .page__social ul:nth-last-child(2){
+            display: none;
+        }
+
+        .page__social ul:last-child {
+            display: none;
+        } */
+
+        #plus {
+            display: none;
+        }
+
+        #in {
+            display: none;
+        }
+
+        .page__social {
+            margin-top: 24px;
+            margin-bottom: 120px;
+        }
+
+        .page__social li {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EEEEEE;
+            border-radius: 16px;
+            border: 1px solid #e4e4e4;
+        }
+    }
+
+    </style>
+</body>
+</html>

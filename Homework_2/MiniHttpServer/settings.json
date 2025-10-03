@@ -1,0 +1,8 @@
+{
+  "FinderPath": "Public/page.html",
+  "ChatGPTPath": "Public/chatgpt.html",
+  "FindUri": "Finder",
+  "ChatGPTUri": "ChatGPT",
+  "Domain": "localhost",
+  "Port": "8888"
+}
