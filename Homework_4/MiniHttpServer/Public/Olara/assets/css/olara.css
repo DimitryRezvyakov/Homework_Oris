@@ -1,0 +1,329 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.sigin-in {
+    max-width: 582px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 50px 50px 80px;
+
+    flex-grow: 1;
+    position: relative;
+}
+.sign-in__logo {
+    justify-self: left;
+    position: relative;
+    top: 0;
+    left: -40px;
+}
+.sign-in__form {
+    display: flex;
+    flex-direction: column;
+}
+#email {
+    margin-top: 7px;
+    border: 1px solid #CBD5E0;
+    background-color: #F7FAFC;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.sign-in__form label {
+    margin-top: 10px;
+    color: #718096;
+    font-size: 16px;
+    font-weight: medium;
+    font-family: "Intern";
+}
+.sign-in__form__title {
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: "Inter";
+    font-weight: bold;
+
+}
+.cr-now {
+    margin-top: 24px;
+    color: #718096;
+    font-family: "Inter";
+    font-size: 18px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.link{
+    color: #1C4532;
+    font-size: 18px;
+    font-weight: medium;
+}
+.password__wrapper {
+    display: flex;
+    border: 1px solid #CBD5E0;
+    background-color: #F7FAFC;
+    border-radius: 10px;
+    margin-top: 7px;
+    position: relative;
+}
+.password__wrapper input {
+    flex-grow: 1;
+    padding: 10px 12px;
+}
+.password__wrapper svg {
+    position: relative;
+    flex-shrink: 1;
+    margin-right: 16px;
+
+}
+
+.password__wrapper::before {
+    content: "";
+    position: absolute;
+    top: calc((100% - 70%) / 2);
+    right: 52px;
+    width: 1px;
+    height: 70%;
+    background-color: #CFD9E0;
+}
+
+.sign-in__form__options {
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 16px;
+}
+.sign-in__form__options a{
+    color: #1C4532;
+    font-weight: middle;
+}
+.remember__wrapper input{
+    vertical-align: middle;
+}
+
+.sign-in__button {
+    margin-top: 10px;
+    color: #F7FAFC;
+    background-color: #1C4532;
+    text-align: center;
+    border-radius: 12px;
+    padding-block: 12px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 18px;
+
+}
+.sign-in__line {
+    margin-top: 40px;
+    position: relative;
+    display: inline;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Inter";
+    padding-inline: 16px;
+    color: #718096;
+}
+
+.sign-in__line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 44%;
+    height: 2px;
+    background-color: #CFD9E0;
+}
+
+.sign-in__line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 44%;
+    height: 2px;
+    background-color: #CFD9E0;
+}
+
+.sign-in__social {
+}
+.social-sm{
+    padding: 10px 13px;
+    border-radius: 30px;
+    border: 1px solid #CBD5E0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: medium;
+    color: #67728A;
+}
+.sign-in__social a p{
+    margin: auto;
+}
+.sign-in__social__google {
+    margin-top: 30px;
+}
+.sign-in__social__facebook {
+    margin-top: 10px;
+}
+.sign-in__social__create-now {
+    display: none;
+}
+.information {
+    max-width: 766px;
+    height: 100vh;
+    padding-inline: 30px;
+    background-color: #1C4532;
+    background-image: url("../images/Elipse.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #F7FAFC;
+
+    flex-grow: 1;
+}
+.information__container {
+
+}
+.information__support {
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Inter";
+    font-weight: medium;
+    font-size: 20px;
+}
+
+.information__support p {
+    margin-left: 18px;
+}
+.information__slide {
+
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0 33px 45px;
+    background-color: #F7FAFC;
+    max-width: 545px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    background-image: url("../images/Illustration.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.information__slide__title {
+    max-width: 255px;
+    color: #1C4532;
+    font-family: "Inter";
+    font-size: 34px;
+    font-weight: bold;
+}
+.information__slide__subtitle {
+    max-width: 255px;
+    color: #718096;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: medium;
+    margin-top: 17px;
+}
+.information__slide__link {
+    background-color: #1C4532;
+    border-radius: 18px;
+    padding: 11px 0px;
+    max-width: 168px;
+    color: #F7FAFC;
+
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: medium;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.information__slide__aside {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding:  20px 0;
+    width: 287px;
+    color: #1C4532;
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    background-color: #F7FAFC;
+    border-radius: 18px;
+
+}
+.slide__aside__img {
+    margin-left: 30px;
+}
+.slide__aside__text {
+
+}
+.aside__text__title {
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: medium;
+}
+.aside__text__price {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.information__addition {
+    max-width: 525px;
+    margin: auto;
+    margin-top: 60px;
+}
+.information__addition__title {
+    font-family: "Inter";
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.information__addition__text {
+    margin-top: 36px;
+    font-family: "Inter";
+    font-size: 15px;
+    color: #CFD9E0;
+    text-align: center;
+}
+.information__list {
+    margin: 36px auto 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 964px) {
+    .information {
+        display: none;
+    }
+}
+
+@media (max-width: 440px) {
+    .sign-in__form__subtitle {
+        display: none;
+    }
+    .sign-in__social__create-now {
+        display: block;
+    }
+    .password__wrapper svg{
+        display: none;
+    }
+    .password__wrapper::before {
+        display: none;
+    }
+    .sign-in__logo {
+        left: 0;
+    }
+}
