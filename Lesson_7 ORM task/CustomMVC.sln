@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFramework", "CustomMVC.App\WebFramework.csproj", "{4A80B781-3289-4011-830C-80518E97A68B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Execute", "Execute\Execute.csproj", "{3903C11A-489D-4B4D-932D-784F89784502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{565E72F9-55E3-4613-9F84-695ECFDD1BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{E83B6ED7-8CE3-4541-AD0C-97E9D6D3AA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFrameworkTests", "WebFrameworkTests\WebFrameworkTests.csproj", "{BA290B5F-D01E-40BA-9FA4-F6CF985914B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyORMLibrary", "MyORMLibrary\MyORMLibrary.csproj", "{1DA9956C-53F2-461B-A946-8FC0926FE4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMTest", "ORMTest\ORMTest.csproj", "{9D7A61C7-1BF9-48FE-BEA6-9CF02AA4C050}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A80B781-3289-4011-830C-80518E97A68B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A80B781-3289-4011-830C-80518E97A68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A80B781-3289-4011-830C-80518E97A68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A80B781-3289-4011-830C-80518E97A68B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3903C11A-489D-4B4D-932D-784F89784502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3903C11A-489D-4B4D-932D-784F89784502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3903C11A-489D-4B4D-932D-784F89784502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3903C11A-489D-4B4D-932D-784F89784502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565E72F9-55E3-4613-9F84-695ECFDD1BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565E72F9-55E3-4613-9F84-695ECFDD1BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565E72F9-55E3-4613-9F84-695ECFDD1BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565E72F9-55E3-4613-9F84-695ECFDD1BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E83B6ED7-8CE3-4541-AD0C-97E9D6D3AA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83B6ED7-8CE3-4541-AD0C-97E9D6D3AA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83B6ED7-8CE3-4541-AD0C-97E9D6D3AA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83B6ED7-8CE3-4541-AD0C-97E9D6D3AA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA290B5F-D01E-40BA-9FA4-F6CF985914B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA290B5F-D01E-40BA-9FA4-F6CF985914B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA290B5F-D01E-40BA-9FA4-F6CF985914B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA290B5F-D01E-40BA-9FA4-F6CF985914B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA9956C-53F2-461B-A946-8FC0926FE4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA9956C-53F2-461B-A946-8FC0926FE4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA9956C-53F2-461B-A946-8FC0926FE4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA9956C-53F2-461B-A946-8FC0926FE4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7A61C7-1BF9-48FE-BEA6-9CF02AA4C050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7A61C7-1BF9-48FE-BEA6-9CF02AA4C050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7A61C7-1BF9-48FE-BEA6-9CF02AA4C050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7A61C7-1BF9-48FE-BEA6-9CF02AA4C050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00814D31-4D34-4759-BF81-AE3D8E34A93E}
+	EndGlobalSection
+EndGlobal

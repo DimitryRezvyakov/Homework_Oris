@@ -1,0 +1,15 @@
+﻿{
+  "Host": {
+    "Port": "8888",
+    "Domain": "localhost",
+    "Protocol": "http"
+  },
+
+  "Environment": {
+    "LogLevel": "Debug",
+    "ApplicationStatus": "Development"
+  },
+  "Database": {
+    "ConnectionString": "Host=localhost;Port=5432;Database=Users;Username=postgres;Password=24092006;"
+  }
+}

@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mediator.Interfaces
+{
+    /// <summary>
+    /// Metadata
+    /// </summary>
+    /// <typeparam name="TResponse">Response type</typeparam>
+    public interface IRequest<TResponse>
+    {
+
+    }
+
+    /// <summary>
+    /// Metadata
+    /// </summary>
+    public interface IRequest
+    {
+
+    }
+}
