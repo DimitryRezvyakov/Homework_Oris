@@ -1,0 +1,146 @@
+﻿<div class="container">
+    <h1>Добавление нового отеля</h1>
+
+    <form id="hotelForm">
+        <div class="form-section">
+            <h2>Основная информация</h2>
+
+            <div class="form-group">
+                <label for="resortId">Курорт</label>
+                <select id="resortId" name="resortId" required>
+                    <option value="">Загрузка...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Название отеля</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Тип отеля</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="hotelType1" name="hotelType" value="Отель" checked>
+                        <label for="hotelType1">Отель</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="hotelType2" name="hotelType" value="Хостел">
+                        <label for="hotelType2">Хостел</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="hotelType3" name="hotelType" value="Вилла">
+                        <label for="hotelType3">Вилла</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Цена</label>
+                <input type="number" id="price" name="price" min="0" step="0.01" required>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Рейтинг и питание</h2>
+
+            <div class="form-group">
+                <label>Количество звезд *</label>
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="stars" name="stars" value="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="raiting">Рейтинг (0-5)</label>
+                <input type="number" id="raiting" name="raiting" min="0" max="5" step="0.1">
+            </div>
+
+            <div class="form-group">
+                <label>Тип питания</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition1" name="nutrition" value="Без питания" checked>
+                        <label for="nutrition1">Без питания</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition2" name="nutrition" value="UAI">
+                        <label for="nutrition2">UAI</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition3" name="nutrition" value="AI">
+                        <label for="nutrition3">AI</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition4" name="nutrition" value="FB">
+                        <label for="nutrition4">FB</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition5" name="nutrition" value="HB">
+                        <label for="nutrition5">HB</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nutrition6" name="nutrition" value="BB">
+                        <label for="nutrition6">BB</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Описание</h2>
+
+            <div class="form-group">
+                <label for="description">Краткое описание</label>
+                <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>HTML описание</label>
+                <div class="editor-container">
+                    <div class="general-info">
+                        <div class="field"><div class="field-label">Основан:</div><div class="field-value" contenteditable="true">1990</div></div>
+                        <div class="field"><div class="field-label">Последняя реновация:</div><div class="field-value" contenteditable="true">2021</div></div>
+                        <div class="field"><div class="field-label">Расположение:</div><div class="field-value" contenteditable="true">45 км от аэропорта Antalya-AYT, 300 м от Kemer.</div></div>
+                        <div class="field"><div class="field-label">Площадь:</div><div class="field-value" contenteditable="true">2 000 кв м</div></div>
+                        <div class="field"><div class="field-label">Телефон:</div><div class="field-value" contenteditable="true">+90 242 814 61 06</div></div>
+                        <div class="field"><div class="field-label">Сайт:</div><div class="field-value" contenteditable="true">www.dinaragardenhotel.com</div></div>
+                        <div class="field"><div class="field-label">Адрес:</div><div class="field-value" contenteditable="true">Merkez mahallesi, Kavaklı cad.no:6, Kemer/ Antalya /Turkey</div></div>
+                    </div>
+
+                    <div id="editor"></div>
+                </div>
+
+                <div class="toolbar" id="toolbar"></div>
+
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button type="button" id="addSectionBtn">+ Добавить секцию</button>
+                    <button type="button" id="addListItemBtn">+ Добавить пункт</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label>Фотографии отеля:</label>
+            <input type="file" id="imageUpload" accept="image/*" multiple>
+            <div id="imagePreview"></div>
+        </div>
+
+        <div class="form-section">
+            <h2>Теги</h2>
+            <div class="amenities-list" id="tagsContainer">
+
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn-secondary" id="cancelBtn">Отмена</button>
+            <button type="submit" class="btn-primary">Сохранить отель</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>WebFramework</Title>
+    <Version>1.0.0</Version>
+    <Authors>$(AssemblyName)</Authors>
+    <Company>$(Authors)</Company>
+    <Product>$(AssemblyName)</Product>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackAsTool>False</PackAsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="MVC\Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+</Project>

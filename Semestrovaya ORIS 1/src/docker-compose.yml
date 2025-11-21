@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: (Название)
+      POSTGRES_USER: (Имя пользователя)
+      POSTGRES_PASSWORD: *******(Пароль БД)
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - myapp-network
+
+  app:
+    image: mini-http-server
+    build:
+        context: ..
+        dockerfile: Presentation/Dockerfile
+    container_name: mini-http-server
+    environment:
+      - ASPNETCORE_URLS=http://+:8888 (Порт приложения)
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=(Название);Username=(Имя пользователя);Password=*******(Пароль БД)
+    ports:
+      - "8888:8888" (Порт приложения) - после добавления убрать все коментарии
+    depends_on:
+      - postgres
+    networks:
+      - myapp-network
+
+volumes:
+  postgres_data:
+
+networks:
+  myapp-network:
+    driver: bridge  

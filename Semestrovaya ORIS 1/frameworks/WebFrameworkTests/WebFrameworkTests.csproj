@@ -1,0 +1,21 @@
+<Project Sdk="MSTest.Sdk/3.6.4">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseVSTest>true</UseVSTest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomMVC.App\WebFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="wwwroot\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

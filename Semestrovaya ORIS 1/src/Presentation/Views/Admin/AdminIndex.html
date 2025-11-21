@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управление отелями</title>
+    <link rel="stylesheet" href="../../wwwroot/css/admin.css">
+</head>
+<body>
+
+    <div class="form-group">
+        <h2>Получить отель по ID</h2>
+        <label for="get-id">ID отеля:</label>
+        <input type="number" id="get-id" min="1" />
+        <button id="get-btn">Получить</button>
+    </div>
+
+    <div class="form-group">
+        <h2>Создать отель</h2>
+        <button id="create-btn">Создать</button>
+    </div>
+
+    <div class="form-group">
+        <h2>Обновить отель по ID</h2>
+        <label for="update-id">ID отеля:</label>
+        <input type="number" id="update-id" min="1" />
+        <button id="update-btn">Обновить</button>
+    </div>
+
+    <div class="form-group">
+        <h2>Удалить отель по ID</h2>
+        <label for="delete-id">ID отеля:</label>
+        <input type="number" id="delete-id" min="1" />
+        <button id="delete-btn">Удалить</button>
+    </div>
+
+    <div>
+        <h2>Response</h2>
+        <div id="response">Здесь появится ответ от сервера</div>
+    </div>
+
+    <div class="modal-overlay" id="modal">
+        <button class="close-btn" id="close-modal">&times;</button>
+        <div class="modal-content" id="modal-content">
+
+        </div>
+    </div>
+    <script type="module" src="../../wwwroot/js//adminCreate.js"></script>
+    <script type="module" src="../../wwwroot/js/adminUpdate.js"></script> 
+    <script src="../../wwwroot/js/admin.js"></script>
+</body>
+</html>

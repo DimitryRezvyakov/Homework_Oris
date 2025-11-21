@@ -1,0 +1,15 @@
+﻿{
+  "Host": {
+    "Domain": "localhost",
+    "Port": "8888",
+    "Protocol": "http"
+  },
+
+  "Environment": {
+    "LogLevel": "Info"
+  },
+
+  "Database": {
+    "ConnectionString": "Host=localhost;Port=5432;Database=Semestrovaya-ver-1;Username=postgres;Password=*******;"
+  }
+}

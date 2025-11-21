@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+    <div class="body_wrapper">
+        <header class="header">
+            <div class="header__wrapper">
+                <form action="POST" class="header__form">
+                    <div class="header__city city-input-container">
+                        <label for="cityInput">НАПРАВЛЕНИЕ</label>
+                        <input type="text"
+                               id="cityInput"
+                               class="header__city__input city-input"
+                               placeholder="Введите город"
+                               autocomplete="off"
+                               data-selected="false" />
+                        <div id="suggestions" class="header__suggestions suggestions"></div>
+                    </div>
+                    <div class="date-input-container">
+                        <label for="datesInput">ДАТЫ ПРОЖИВАНИЯ</label>
+                        <input type="text"
+                               id="datesInput"
+                               class="city-input"
+                               placeholder="Даты проживания"
+                               readonly
+                               autocomplete="off" />
+                        <div id="calendarPopup" class="calendar-popup"></div>
+                    </div>
+
+                    <div class="guests-input-container">
+                        <label for="guestsInput">ТУРИСТЫ</label>
+                        <input type="text" class="guests-input" id="guestsInput" placeholder="Сколько гостей" readonly>
+
+                        <div class="guests-dropdown" id="guestsDropdown">
+                            <div class="dropdown-header">Сколько гостей</div>
+
+                            <div class="counter-row">
+                                <div class="counter-label">Взрослые</div>
+                                <div class="counter-control">
+                                    <button class="btn" id="adultsMinus" disabled type="button">-</button>
+                                    <span class="count" id="adultsCount">1</span>
+                                    <button class="btn" id="adultsPlus" type="button">+</button>
+                                </div>
+                            </div>
+
+                            <div class="counter-row">
+                                <div class="counter-label">Дети</div>
+                                <div class="counter-control">
+                                    <button class="btn" id="childrenPlus" type="button">+</button>
+                                </div>
+                            </div>
+
+                            <div id="childrenList" class="added-children"></div>
+
+                            <div id="ageSelector" class="age-selector" style="display: none;">
+                                <div class="age-title">Выберите возраст ребёнка</div>
+                                <div class="age-options" id="ageOptions"></div>
+                            </div>
+
+                            <div class="dropdown-footer">
+                                <label class="remember">
+                                    <input type="checkbox" id="rememberChoice"> Запомнить мой выбор
+                                </label>
+                                <button class="apply-btn" id="applyBtn" type="button">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="header__form__button" type="button">Найти</button>
+                </form>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main__wrapper">
+                <aside class="aside">
+                    <form action="POST" class="aside__search">
+                        <div class="star-rating aside-fr" id="starRating">
+                            <span class="star-rating__label">КЛАСС ОТЕЛЯ</span>
+                            <div class="star-rating__stars">
+                                <span class="star-rating__star" data-value="1">★</span>
+                                <span class="star-rating__star" data-value="2">★</span>
+                                <span class="star-rating__star" data-value="3">★</span>
+                                <span class="star-rating__star" data-value="4">★</span>
+                                <span class="star-rating__star" data-value="5">★</span>
+                            </div>
+                        </div>
+                        <div class="meal-selector-container">
+                            <div class="meal-input aside-fr" id="mealInput">
+                                <span>ПИТАНИЕ</span>
+                                <span class="arrow">▼</span>
+                            </div>
+
+                            <div class="meal-dropdown" id="mealDropdown">
+                                <div class="meal-header">ПИТАНИЕ ОТ</div>
+                                <div class="meal-options">
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="" checked>
+                                        <span>Любое</span>
+                                    </label>
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="BB">
+                                        <span>BB - Только завтрак</span>
+                                    </label>
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="HB">
+                                        <span>HB - Завтрак, ужин</span>
+                                    </label>
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="FB">
+                                        <span>FB - Полный пансион</span>
+                                    </label>
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="AI">
+                                        <span>AI - Все включено</span>
+                                    </label>
+                                    <label class="meal-option">
+                                        <input type="radio" name="meal" value="UAI">
+                                        <span>UAI - Ультра все включено</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rating-selector-container">
+                            <div class="rating-input aside-fr" id="ratingInput">
+                                <span>РЕЙТИНГ ОТЕЛЯ</span>
+                                <span class="arrow">▼</span>
+                            </div>
+
+                            <div class="rating-dropdown" id="ratingDropdown">
+                                <div class="rating-options">
+                                    <label class="rating-option">
+                                        <input type="radio" name="rating" value="" checked>
+                                        <span>Любой</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="radio" name="rating" value="3.0">
+                                        <span>3.0 и более</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="radio" name="rating" value="3.5">
+                                        <span>3.5 и более</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="radio" name="rating" value="4.0">
+                                        <span>4.0 и более</span>
+                                    </label>
+                                    <label class="rating-option">
+                                        <input type="radio" name="rating" value="4.5">
+                                        <span>4.5 и более</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="amenities-selector-container">
+                            <div class="amenities-input aside-fr" id="amenitiesInput">
+                                <span>УСЛУГИ И УДОБСТВА</span>
+                                <span class="arrow">▼</span>
+                            </div>
+
+                            <div class="amenities-dropdown" id="amenitiesDropdown">
+                                <div class="amenities-tabs">
+                                    <button class="tab-btn active" data-tab="all" type="button">ВСЕ</button>
+                                    <button class="tab-btn" data-tab="selected" type="button">ВЫБРАНО <span id="selectedCount">0</span></button>
+                                    <button class="tab-btn" data-tab="reset" type="button">СБРОСИТЬ</button>
+                                </div>
+
+                                <div class="amenities-content">
+
+                                    <div class="tab-pane" id="tab-all">
+                                        $foreach(var category in Model.Categories)
+                                        <div class="amenities-category">
+                                            <div class="category-header">${category.Name}</div>
+                                            <div class="amenities-list" id="popularList">
+                                                $foreach(var item in category.Items)
+                                                <label class="amenities-item">
+                                                    <input type="checkbox" value="${item.Id}">
+                                                    <span>${item.Value}</span>
+                                                </label>
+                                                $endfor
+                                            </div>
+                                        </div>
+                                        $endfor
+                                    </div>
+
+                                    <div class="tab-pane hidden" id="tab-selected">
+                                        <div class="selected-items" id="selectedItems">
+
+                                        </div>
+                                        <div class="no-selected" id="noSelectedMessage">Ничего не выбрано</div>
+                                    </div>
+
+                                    <div class="tab-pane hidden" id="tab-reset">
+                                        <p>Вы уверены, что хотите сбросить все выбранные услуги?</p>
+                                        <div class="reset-actions">
+                                            <button id="confirmReset" type="button">Да, сбросить</button>
+                                            <button id="cancelReset" type="button">Отмена</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="amenities-footer">
+                                    <button id="applyAmenities" type="button">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="budget-selector-container">
+                            <div class="budget-input aside-fr" id="budgetInput">
+                                <span>БЮДЖЕТ (РУБ)</span>
+                                <span class="arrow">▼</span>
+                            </div>
+
+                            <div class="budget-dropdown" id="budgetDropdown">
+                                <div class="budget-header">БЮДЖЕТ</div>
+                                <div class="budget-subheader">Максимальный бюджет (РУБ)</div>
+
+                                <input type="number" id="budgetAmount" placeholder="Введите сумму" min="0" step="1" class="budget-amount">
+
+                                <div class="budget-currency">
+                                    <div class="currency-header">Валюта</div>
+                                    <div class="currency-options">
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="RUB" checked>
+                                            <span>РУБ - Российские рубли</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="USD/EUR">
+                                            <span>USD/EUR - Валюта</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="BYN">
+                                            <span>BYN - Белорусские рубли</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="THG">
+                                            <span>THG - Тенге</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="UAH">
+                                            <span>UAH - Гринвы</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="UZS">
+                                            <span>UZS - Сумы</span>
+                                        </label>
+                                        <label class="currency-option">
+                                            <input type="radio" name="currency" value="KGZ">
+                                            <span>KGZ - Сомы</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="budget-footer">
+                                    <button id="applyBudget" type="button">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="main__form__button" type="button">Применить</button>
+                    </form>
+                </aside>
+
+                <section class="hotels">
+                    <ul class="hotels__list">
+                        $foreach(var hotel in Model.Hotels)
+                        <li class="hotels__list__hotel">
+                            <div class="hotel-card">
+
+                                <div class="hotel-image">
+                                    <img src="${hotel.Image}" alt="Asitane Life">
+                                    <span class="zoom-icon">🔍</span>
+                                </div>
+
+                                <div class="hotel-info">
+                                    <div class="hotel-header">
+                                        <div class="hotel-stars">
+                                            $foreach(var _ in hotel.Stars)
+                                            <span>⭐</span>
+                                            $endfor
+                                        </div>
+                                        <h3 class="hotel-name" data-hotelId="${hotel.Id}">${hotel.Name}</h3>
+                                        <div class="hotel-location">${hotel.Location}</div>
+                                    </div>
+
+                                    <p class="hotel-description">
+                                        ${hotel.Description}
+                                    </p>
+
+                                    <div class="hotel-actions">
+                                        <button class="btn-hotels btn-hotels-outline">ОБ ОТЕЛЕ</button>
+                                        <button class="btn-hotels btn-hotels-outline">ОТЗЫВЫ</button>
+                                        <button class="btn-hotels btn-hotels-outline">КАРТА</button>
+                                        <button class="btn-hotels btn-hotels-heart">❤️</button>
+                                        <button class="btn-hotels btn-hotels-primary">ВЫБРАТЬ</button>
+                                    </div>
+                                </div>
+
+                                <div class="hotel-price-section">
+                                    <div class="hotel-rating">
+                                        <div class="rating-label">РЕЙТИНГ</div>
+                                        <div class="rating-value">${hotel.Raiting}</div>
+                                    </div>
+                                    <div class="hotel-price">
+                                        <div class="price-label">ЦЕНА ОТ</div>
+                                        <div class="price-value">${hotel.Cost} руб</div>
+                                        <div class="price-per-room">ЗА НОМЕР</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        $endfor
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../../wwwroot/js/citiSelector.js"></script>
+    <script src="../../wwwroot/js/calendar.js"></script>
+    <script src="../../wwwroot/js/people.js"></script>
+    <script src="../../wwwroot/js/stars.js"></script>
+    <script src="../../wwwroot/js/meal.js"></script>
+    <script src="../../wwwroot/js/raiting.js"></script>
+    <script src="../../wwwroot/js/tags.js"></script>
+    <script src="../../wwwroot/js/budget.js"></script>
+    <script src="../../wwwroot/js/applyFilters.js"></script>
+    <script src="../../wwwroot/js/getHotel.js"></script>
+</body>
+</html>

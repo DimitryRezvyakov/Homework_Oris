@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Countries\Commands\" />
+    <Folder Include="Features\Resorts\Commands\" />
+    <Folder Include="Features\Tags\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediator" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

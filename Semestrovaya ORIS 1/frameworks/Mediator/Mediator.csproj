@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Mediator</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Mediator</Title>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomMVC.App\WebFramework.csproj" />
+  </ItemGroup>
+
+</Project>

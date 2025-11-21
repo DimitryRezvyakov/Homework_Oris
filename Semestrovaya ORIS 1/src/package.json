@@ -1,0 +1,19 @@
+{
+  "name": "semestrovaya_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tiptap/core": "^2.27.1",
+    "@tiptap/extension-underline": "^2.5.0",
+    "@tiptap/pm": "^2.27.1",
+    "@tiptap/starter-kit": "^2.27.1"
+  }
+}

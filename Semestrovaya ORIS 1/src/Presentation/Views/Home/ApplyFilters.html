@@ -1,0 +1,47 @@
+﻿$foreach(var hotel in Model.Hotels)
+<li class="hotels__list__hotel">
+    <div class="hotel-card">
+
+        <div class="hotel-image">
+            <img src="${hotel.Image}" alt="Asitane Life">
+            <span class="zoom-icon">🔍</span>
+        </div>
+
+        <div class="hotel-info">
+            <div class="hotel-header">
+                <div class="hotel-stars">
+                    $foreach(var _ in hotel.Stars)
+                    <span>⭐</span>
+                    $endfor
+                </div>
+                <h3 class="hotel-name" data-hotelId="${hotel.Id}">${hotel.Name}</h3>
+                <div class="hotel-location">${hotel.Location}</div>
+            </div>
+
+            <p class="hotel-description">
+                ${hotel.Description}
+            </p>
+
+            <div class="hotel-actions">
+                <button class="btn-hotels btn-hotels-outline">ОБ ОТЕЛЕ</button>
+                <button class="btn-hotels btn-hotels-outline">ОТЗЫВЫ</button>
+                <button class="btn-hotels btn-hotels-outline">КАРТА</button>
+                <button class="btn-hotels btn-hotels-heart">❤️</button>
+                <button class="btn-hotels btn-hotels-primary">ВЫБРАТЬ</button>
+            </div>
+        </div>
+
+        <div class="hotel-price-section">
+            <div class="hotel-rating">
+                <div class="rating-label">РЕЙТИНГ</div>
+                <div class="rating-value">${hotel.Raiting}</div>
+            </div>
+            <div class="hotel-price">
+                <div class="price-label">ЦЕНА ОТ</div>
+                <div class="price-value">${hotel.Cost} руб</div>
+                <div class="price-per-room">ЗА НОМЕР</div>
+            </div>
+        </div>
+    </div>
+</li>
+$endfor

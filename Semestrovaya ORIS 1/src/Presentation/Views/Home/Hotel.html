@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../wwwroot/css/hotel.css">
+    <link rel="stylesheet" href="../../wwwroot/css/reset.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__hotel-description">
+                <p class="hotel-description__stars">
+                    $foreach(var _ in Model.HotelStars)
+                    <span>★</span>
+                    $endfor
+                </p>
+                <h1 class="hotel-description__name">
+                    ${Model.HotelName}
+                </h1>
+                <p class="hotel-description__location">
+                    ${Model.HotelCountry}, ${Model.HotelResort}
+                </p>
+            </div>
+
+            <div class="header__hotel-ticket">
+                <div class="header__hotel-ticket__main">
+                    <div class="hotel-ticket__common">
+                        <div class="common__placement cb">
+                            <div class="common__placement__img cimg">
+                                <img src="../../wwwroot/images/home.png" alt="ddd">
+                            </div>
+                            <div class="common__placement__info ci">
+                                <p class="common__placement__country ct">
+                                    ${Model.HotelCountry}
+                                </p>
+                                <p class="common__placement__type cs">
+                                    Только проживание
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="common__dates cb">
+                            <div class="common__placement__img cimg">
+                                <img src="../../wwwroot/images/calendar.png" alt="ddd">
+                            </div>
+                            <div class="common__dates__info ci">
+                                <p class="common__dates__start-date ct">
+                                    Дата заселения ${Model.StartDate} 
+                                </p>
+
+                                <p class="common__date__nights-count cs">
+                                    ${Model.NightsCount} Ночей
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="common__nutrition cb">
+                            <div class="common__placement__img cimg">
+                                <img src="../../wwwroot/images/fork.png" alt="ddd">
+                            </div>
+                            <div class="common__nutrition__info ci">
+                                <p class="common__nutrition__title ct">
+                                    Питание
+                                </p>
+
+                                <p class="common__nutrition__value cs">
+                                    ${Model.Nutrition}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel-ticket__additional">
+                        <div class="additional__room cb">
+                            <div class="common__placement__img cimg">
+                                <img src="../../wwwroot/images/bed.png" alt="ddd">
+                            </div>
+                            <div class="additional__room__info">
+                                <a href="" class="additional__room__type ct">standart room</a>
+                                <p class="additional__room__capacity cs">
+                                    ${Model.ParentCount} взрослых, ${Model.ChildCount} детей
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="additional__hotel-type cb">
+                            <div class="common__placement__img cimg">
+                                <img src="../../wwwroot/images/info.png" alt="ddd">
+                            </div>
+                            <p class="additional__hotel-type__type ct">
+                                ${Model.HotelType}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hotel-ticket__continue">
+                    <div class="continue__price">
+                        <p class="continue__price__price">
+                            ${Model.Cost}
+                        </p>
+                        <div class="continue__price__info">
+                            <span class="cp-currency cp">РУБ</span>
+                            <span class="cp">ЗА НОМЕР</span>
+                        </div>
+
+                        <img src="../../wwwroot/images/like.png" alt="ddd" class="continue__price__heart">
+                    </div>
+                    <button class="continue__button" type="button">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__wrapper">
+            <div class="main__tabs-selector">
+                <button class="main__tabs-selector__button hotel-btn" id="hotel-btn1" type="button">Отель</button>
+                <button class="main__tabs-selector__button images-btn" id="hotel-btn2" type="button">Фото</button>
+                <button class="main__tabs-selector__button review-btn" id="hotel-btn3" type="button">Отзывы</button>
+                <button class="main__tabs-selector__button map-btn" id="hotel-btn4" type="button">На карте</button>
+                <button class="main__tabs-selector__button more-btn" id="hotel-btn5" type="button">Похожие отели</button>
+            </div>
+
+            <div class="main__tabs">
+                <div class="tabs__hotel-tab" id="tab1">
+                    <div class="hotel-tab__small-description">
+                        ${Model.HotelDescription}
+                    </div>
+
+                    <div class="slider">
+                        <div class="slider__main-image-wrapper">
+                            <button class="slider__nav-button slider__nav-button--prev" aria-label="Предыдущее фото">‹</button>
+                            <img src="" alt="Отель" class="slider__main-image" id="mainImage">
+                            <button class="slider__nav-button slider__nav-button--next" aria-label="Следующее фото">›</button>
+                            <div class="slider__counter">0/0</div>
+                        </div>
+
+                        <div class="slider__thumbnails-wrapper">
+
+                            <div class="sliders__thubnail-wrapper__comments">
+                                <p class="comments__raiting">
+                                    ${Model.HotelRating}
+                                </p>
+                                <p class="comments__raiting-interpretation">
+                                    <span class="ri-title">Хорошо</span>
+                                    <span class="ri-subtitle">Оценка по X отзывам</span>
+                                </p>
+                            </div>
+
+                            <div class="slider__thumbnails">
+
+                            </div>
+                            <button class="slider__show-more-btn">Показать больше фото</button>
+                        </div>
+
+                        <div class="slider__images" style="display: none;">
+                            $foreach(var image in Model.Images)
+                            <img src="${image}" alt="Фото 1">
+                            $endfor
+                        </div>
+                    </div>
+                    <div class="hotel-tab__html-description">
+                        ${Model.HotelHtmlDescription}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../wwwroot/js/slider.js"></script>
+</body>
+</html>
